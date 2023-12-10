@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Amigo Invisible</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        input, button {
+            margin: 10px;
+            padding: 5px;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            font-size: 20px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Descubre a tu Amigo Invisible</h1>
+    <p>Introduce tu código:</p>
+    <input type="text" id="codigo">
+    <button onclick="descubrirAmigo()">Descubrir</button>
+
+    <div id="resultado"></div>
+
+    <script>
+				function descubrirAmigo() {
+			var codigo = document.getElementById("codigo").value;
+			var resultado = document.getElementById("resultado");
+
+			var amigos = {
+			"92721": "Javier",
+			"65621": "María Coll",
+			"11797": "Luís",
+			"52936": "Mateo",
+			"14327": "Elena",
+			"52736": "Pili",
+			"81498": "Oscar",
+			"78889": "María Borao",
+			"20917": "Marta",
+			"67910": "Borja",
+			"41862": "Beatriz",
+			"49527": "Mariangeles",
+			"98314": "Mikel",
+			"49456": "Abuela Luz"
+		};
+
+
+			if (amigos[codigo]) {
+				resultado.innerHTML = "Tu amigo invisible es: " + amigos[codigo];
+			} else {
+				resultado.innerHTML = "Código no válido.";
+			}
+		}
+
+    </script>
+</body>
+</html>
